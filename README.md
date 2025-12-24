@@ -158,6 +158,12 @@ require(MerkleProof.verify(proof, root, leaf), "Invalid proof");
 
 ---
 
+## TODO
+
+* Add TEE attestation to cryptographically verify that the indexer executed correctly and produced the published Merkle root from the intended code and inputs. This would allow consumers to trust not only the Merkle proofs, but also the integrity of the indexing process itself.
+
+---
+
 ## License
 
 MIT
