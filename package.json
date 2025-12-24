@@ -1,0 +1,35 @@
+{
+  "name": "farcaster-score-registry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm -r build",
+    "clean": "pnpm -r clean",
+    "format": "pnpm -r format",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "@allemanfredi",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.1",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "pnpm --filter \"./\" lint --if-present"
+    ],
+    "*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml,css,scss}": [
+      "pnpm --filter \"./\" format --if-present"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^20.0.0",
+    "commitlint": "20.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.1",
+    "pinst": "^3.0.0"
+  }
+}
